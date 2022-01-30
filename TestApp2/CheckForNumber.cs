@@ -1,7 +1,7 @@
 ﻿
 namespace TestApp2
 {
-    internal class CheckForNumber
+    class CheckForNumber
     {
         public static int value;
 

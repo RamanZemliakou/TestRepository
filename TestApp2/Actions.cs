@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace TestApp2
 {
-    internal class Actions
+    class Actions
     {
-        private static int IntSum(string enteredMessage)
+        private int IntSum(string enteredMessage)
         {
             return CheckForNumber.value + enteredMessage.Length;
         }
 
-        private static char[] StringReverse(string enteredMessage)
+        private char[] StringReverse(string enteredMessage)
         {
             return enteredMessage.Reverse().ToArray();
         }
 
-        public static void ParseMessage(string enteredMessage)
+        public void ParseMessage(string enteredMessage)
         {
-
             if (!CheckForNumber.IsNumber(enteredMessage))
             {
                 var stringResult = StringReverse(enteredMessage).ToString();

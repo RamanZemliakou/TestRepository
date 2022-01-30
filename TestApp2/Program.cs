@@ -14,7 +14,8 @@ namespace TestApp2
             ConsoleWorker.WriteMessage("Input field string/int: ");
             var enteredMessage = ConsoleWorker.ReadMessage();
 
-            Actions.ParseMessage(enteredMessage);
+            Actions actions = new Actions();
+            actions.ParseMessage(enteredMessage);
         }
     }
 }

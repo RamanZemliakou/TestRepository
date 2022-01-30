@@ -2,7 +2,7 @@
 
 namespace TestApp2
 {
-    internal class ConsoleWorker
+    class ConsoleWorker
     {
         public static void WriteMessage(string message)
         {
