@@ -14,16 +14,7 @@ namespace TestApp2
             ConsoleWorker.WriteMessage("Input field string/int: ");
             var enteredMessage = ConsoleWorker.ReadMessage();
 
-            if (CheckForNumber.IsNumber(enteredMessage))
-            {
-                var intResult = Actions.IntSum(enteredMessage).ToString();
-                ConsoleWorker.WriteMessage(intResult);
-            }
-            else
-            {
-                var stringResult = Actions.StringReverse(enteredMessage).ToString();
-                ConsoleWorker.WriteMessage(stringResult);
-            }
+            Actions.ParseMessage(enteredMessage);
         }
     }
 }
