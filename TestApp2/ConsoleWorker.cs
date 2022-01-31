@@ -12,6 +12,6 @@ namespace TestApp2
         public static string ReadMessage()
         {
             return Console.ReadLine();
-        }        
+        }
     }
 }

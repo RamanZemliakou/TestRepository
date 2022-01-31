@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TestApp2
 {
@@ -20,18 +17,17 @@ namespace TestApp2
 
         public void ParseMessage(string enteredMessage)
         {
-            if (!CheckForNumber.IsNumber(enteredMessage))
-            {
-                var stringResult = StringReverse(enteredMessage).ToString();
-                ConsoleWorker.WriteMessage(stringResult);
-                
-            }
-            else
+            if (CheckForNumber.IsNumber(enteredMessage))
             {
                 var intResult = IntSum(enteredMessage).ToString();
                 ConsoleWorker.WriteMessage(intResult);
             }
-            return;
+            else
+            {
+                var stringResult = new string(StringReverse(enteredMessage));
+
+                ConsoleWorker.WriteMessage(stringResult);
+            }
         }
     }
 }
