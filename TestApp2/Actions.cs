@@ -5,12 +5,12 @@ namespace TestApp2
 {
     class Actions
     {
-        private int IntSum(string enteredMessage)
+        public int IntSum(string enteredMessage)
         {
             return CheckForNumber.value + enteredMessage.Length;
         }
 
-        private char[] StringReverse(string enteredMessage)
+        public char[] StringReverse(string enteredMessage)
         {
             return enteredMessage.Reverse().ToArray();
         }
@@ -25,7 +25,6 @@ namespace TestApp2
             else
             {
                 var stringResult = new string(StringReverse(enteredMessage));
-
                 ConsoleWorker.WriteMessage(stringResult);
             }
         }
