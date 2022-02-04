@@ -8,24 +8,20 @@ namespace TestApp2
 {
     class Converter
     {
-        private int IntSum(string enteredMessage)
+        private int IntSum(int enteredMessage)
         {
-            return CheckForNumber.value + enteredMessage.Length;
+            return CheckForNumber.value + Convert.ToInt32(enteredMessage.ToString().Length);
         }
 
         private char[] StringReverse(string enteredMessage)
         {
             return enteredMessage.Reverse().ToArray();
         }
+
         public void ParseInput(int message)
         {
             var intResult = IntSum(message).ToString();
             ConsoleWorker.WriteMessage(intResult);
-        }
-
-        private object IntSum(int value)
-        {
-            throw new NotImplementedException();
         }
 
         public void ParseInput(string message)

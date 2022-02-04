@@ -5,9 +5,9 @@ namespace TestApp2
     {
         public static int value;
 
-        public static bool IsNumber(string str)
+        public bool IsNumber(string str)
         {
-            return int.TryParse(str, out value);
+            return int.TryParse(str, out  value);
         }
     }
 }
