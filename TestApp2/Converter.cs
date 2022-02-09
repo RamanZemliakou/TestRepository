@@ -10,7 +10,7 @@ namespace TestApp2
     {
         private int IntSum(int enteredMessage)
         {
-            return CheckForNumber.value + Convert.ToInt32(enteredMessage.ToString().Length);
+            return enteredMessage + enteredMessage.ToString().Length;
         }
 
         private char[] StringReverse(string enteredMessage)

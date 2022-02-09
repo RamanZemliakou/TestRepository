@@ -15,14 +15,16 @@ namespace TestApp2
                 ConsoleWorker.WriteMessage("Input field string/int: ");
                 var enteredMessage = ConsoleWorker.ReadMessage();
                 var isNumber = checkForNumber.IsNumber(enteredMessage);
+
                 if (isNumber)
                 {
-                    converter.ParseInput(CheckForNumber.value);
+                    converter.ParseInput(Int32.Parse(enteredMessage));
                 }
                 else
                 {
                     converter.ParseInput(enteredMessage);
                 }
+
                 ConsoleWorker.WriteMessage("Press any key to continue or Esc to exit");
                 ConsoleWorker.WriteMessage("----------------------------------------");
             }
